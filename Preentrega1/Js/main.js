@@ -1,4 +1,5 @@
-let bienvenida = prompt("Escribi tu nombre: ");
+
+let bienvenida = prompt("Escribi tu nombre: ").toLowerCase();
 alert("Hola DT "+ bienvenida );
 
 const jugadores = [ 
@@ -11,21 +12,24 @@ console.log("Estos son los posibles " , jugadores);
 let jugadoresSeleccionados = [];
 
 function equipo() {
+    while (jugadoresSeleccionados.length < 5) {
+        let jugadorElegido = prompt(`Elige un jugador (${5 - jugadoresSeleccionados.length} restantes:)`);
+        
 
-while (jugadoresSeleccionados.length < 5) {
-    let jugadorElegido = prompt(`Elige un jugador (${5 - jugadoresSeleccionados.length} restantes:}`);
-
-    if (!jugadores.includes(jugadorElegido)) {
+        if (!jugadores.includes(jugadorElegido)) {
         alert("Por favor, convoca un jugador de la lista.");
-    } else if (jugadoresSeleccionados.includes(jugadorElegido)) {
+        } else if (jugadoresSeleccionados.includes(jugadorElegido)) {
         alert("Ya elegiste a ese jugador. Por favor, eligí otro.");
-    } else {
+        } else {
         jugadoresSeleccionados.push(jugadorElegido);
+        }
     }
-}
 
 }
 equipo();
+
+// localStorage.setItem("equipo", bienvenida);
+// localStorage.setItem("jugadores", JSON.stringify(jugadoresSeleccionados));
 
 console.log("Jugadores seleccionados para el 5 titular:", jugadoresSeleccionados);
 
