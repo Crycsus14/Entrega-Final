@@ -17,9 +17,9 @@ function datosEquipo() {
         Mediocampistas2: document.getElementById("Mediocampistas2").value,
         Delanteros: document.getElementById("Delanteros").value,
     }
-    if(document.getElementById("Mediocampistas").value === document.getElementById("Mediocampistas2").value){
+        if(document.getElementById("Mediocampistas").value === document.getElementById("Mediocampistas2").value){
         alert("Por favor selecciona otro Mediocampista 2")
-    }
+        }
     
     const datosJson = JSON.stringify(infoEquipo);
 
