@@ -9,50 +9,63 @@
 </head>
 <body>
     
-    <H1>Soy DT</H1>
+    <H1 class="titulo">Soy DT</H1>
     <h2>Elegi tu 5 ideal!</h2>
     
 
-    <form action="#" method="get">
+    <form id="Equipo" action="#" method="get">
         <label for="Arqueros">Arqueros</label>
-        <datalist  id="Arqueros" name="Arqueros">
+        <datalist  id="ArquerosDatalist" >
             <option>Arquero 1</option>
             <option>Arquero 2</option>
             <option>Arquero 3</option>
         </datalist>
-         <input type="text" name="Arqueros" id="Arq" list="Arqueros">
+         <input type="text" name="Arqueros" id="Arqueros" list="ArquerosDatalist">
 
          <label for="Defensores">Defensores</label>
-         <datalist  id="Defensores" name="Defensores">
+         <datalist  id="DefensoresDatalist">
              <option>Defensor 4</option>
              <option>Defensor 5</option>
              <option>Defensor 6</option>
              <option>Defensor 7</option>
          </datalist>
-          <input type="text" name="Defensores" id="Def" list="Defensores">
+          <input type="text" name="Defensores" id="Defensores" list="DefensoresDatalist">
 
           <label for="Mediocampistas">Mediocampistas</label>
-        <datalist  id="Mediocampistas" name="Mediocampistas">
+        <datalist  id="MediocampistasDatalist" >
             <option>Mediocampista 8</option>
             <option>Mediocampista 9</option>
             <option>Mediocampista 10</option>
             <option>Mediocampista 11</option>
         </datalist>
-         <input type="text" name="Mediocampistas" id="Med" list="Mediocampistas">
+         <input type="text" name="Mediocampistas" id="Mediocampistas" list="MediocampistasDatalist">
+
+         <label for="Mediocampistas2">Mediocampistas2</label>
+         <datalist  id="MediocampistasDatalist2" >
+            <option>Mediocampista 8</option>
+            <option>Mediocampista 9</option>
+            <option>Mediocampista 10</option>
+            <option>Mediocampista 11</option>
+        </datalist>
+         <input type="text" name="Mediocampistas2" id="Mediocampistas2" list="MediocampistasDatalist2">
 
          <label for="Delanteros">Delanteros</label>
-        <datalist  id="Delanteros" name="Delanteros">
+        <datalist  id="DelanterosDatalist">
             <option>Delantero 12</option>
             <option>Delantero 13</option>
             <option>Delantero 14</option>
             <option>Delantero 15</option>
             
         </datalist>
-        <input type="text" name="Delanteros" id="Del" list="Delanteros"> 
+        <input type="text" name="Delanteros" id="Delanteros" list="DelanterosDatalist"> 
 
+     <button id="botonElegidos">Elegir</button>
+     <button id="botonConvocados">Convocados</button>
     </form>
-    <br>
+   
 
+    <br>
+    <div id="infoEquipoConvocado">Tus Convocados: </div>
 
 </body>
 </html>

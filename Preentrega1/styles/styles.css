@@ -2,4 +2,31 @@
     font-family: none;
     margin: 0;
     padding: 0;
+    list-style: none;
+}
+.titulo { 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-shadow: 2px 2px 3px rgba(7, 115, 196,0.5) ;
+    
+}
+#infoEquipoConvocado {
+    color: rgb(7, 115, 196);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #8888;
+
+}
+form {
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #888f;
+}
+button {
+    color:whitesmoke;
+    background-color: rgb(7, 115, 196);
 }

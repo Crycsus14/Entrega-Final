@@ -2,39 +2,54 @@
 let bienvenida = prompt("Escribi tu nombre: ").toLowerCase();
 alert("Hola DT "+ bienvenida );
 
-const jugadores = [ 
-    "Jugador 1", "Jugador 2", "Jugador 3", "Jugador 4", "Jugador 5",
-    "Jugador 6", "Jugador 7", "Jugador 8", "Jugador 9", "Jugador 10",
-    "Jugador 11", "Jugador 12", "Jugador 13", "Jugador 14", "Jugador 15"
-];
-console.log("Estos son los posibles " , jugadores);
+let botonElegidos = document.getElementById("botonElegidos");
+botonElegidos.addEventListener("click", datosEquipo);
 
-let jugadoresSeleccionados = [];
+let botonConvocados = document.getElementById("botonConvocados");
+botonConvocados.addEventListener("click", traerEquipo);
 
-function equipo() {
-    while (jugadoresSeleccionados.length < 5) {
-        let jugadorElegido = prompt(`Elige un jugador (${5 - jugadoresSeleccionados.length} restantes:)`);
-        
-
-        if (!jugadores.includes(jugadorElegido)) {
-        alert("Por favor, convoca un jugador de la lista.");
-        } else if (jugadoresSeleccionados.includes(jugadorElegido)) {
-        alert("Ya elegiste a ese jugador. Por favor, eligí otro.");
-        } else {
-        jugadoresSeleccionados.push(jugadorElegido);
-        }
+function datosEquipo() {
+    const Jugadores = document.getElementById("Equipo");
+    const infoEquipo = {
+        Arqueros: document.getElementById("Arqueros").value,
+        Defensores: document.getElementById("Defensores").value,
+        Mediocampistas: document.getElementById("Mediocampistas").value,
+        Mediocampistas2: document.getElementById("Mediocampistas2").value,
+        Delanteros: document.getElementById("Delanteros").value,
     }
+    if(document.getElementById("Mediocampistas").value === document.getElementById("Mediocampistas2").value){
+        alert("Por favor selecciona otro Mediocampista 2")
+    }
+    
+    const datosJson = JSON.stringify(infoEquipo);
 
+    localStorage.setItem("Equipocompleto", datosJson);
+    
 }
-equipo();
 
-// localStorage.setItem("equipo", bienvenida);
-// localStorage.setItem("jugadores", JSON.stringify(jugadoresSeleccionados));
+function traerEquipo() {
+    const Jugadores = document.getElementById("Equipo");
+    const datosJson = localStorage.getItem("Equipocompleto");
+    if (datosJson) { 
+        const infoEquipo = JSON.parse(datosJson);
+        Jugadores["Arqueros"].value = infoEquipo.Arqueros;
+        Jugadores["Defensores"].value = infoEquipo.Defensores;
+        Jugadores["Mediocampistas"].value = infoEquipo.Mediocampistas;
+        Jugadores["Mediocampistas2"].value = infoEquipo.Mediocampistas2;
+        Jugadores["Delanteros"].value = infoEquipo.Delanteros;
 
-console.log("Jugadores seleccionados para el 5 titular:", jugadoresSeleccionados);
+        const infoEquipoConvocado = document.getElementById("infoEquipoConvocado");
+        infoEquipoConvocado.innerHTML = "";
 
-document.write("CONVOCATORIA DEL DT " , bienvenida , " ,tus elegidos son: ", jugadoresSeleccionados );
+        const infoEquipoLista = document.createElement("ul");
 
-alert("Tus jugadores para el 5 titular son: " + jugadoresSeleccionados);
+        for (const key in infoEquipo) {
+            const listaItem = document.createElement("li");
+            listaItem.textContent = `${key}: ${infoEquipo[key]}`;
+            infoEquipoLista.appendChild(listaItem);
+        }
 
-alert("MUCHA SUERTE EN EL TORNEO DT " + bienvenida + "!!");
+        infoEquipoConvocado.appendChild(infoEquipoLista);
+    } 
+       
+}
