@@ -21,10 +21,12 @@ section{
     justify-content: center;
     align-content: center;
     color: black;
+    text-shadow:2px 2px 4px rgb(7, 115, 196);
 }
 
 #infoEquipoConvocado {
     color: rgb(7, 115, 196);
+    text-shadow:2px 2px 4px #8811;
     display: flex;
     justify-content: center;
     align-content: center;

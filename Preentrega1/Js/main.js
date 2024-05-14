@@ -1,6 +1,6 @@
 
-let bienvenida = prompt("Escribi tu nombre: ").toLowerCase();
-alert("Hola DT "+ bienvenida );
+setTimeout(() => {let bienvenida = prompt("Escribi tu nombre: ").toLowerCase();
+alert("Hola DT "+ bienvenida );}, 1500);
 
 let botonElegidos = document.getElementById("botonElegidos");
 botonElegidos.addEventListener("click", datosEquipo);
