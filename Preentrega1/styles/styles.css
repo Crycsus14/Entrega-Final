@@ -4,13 +4,25 @@
     padding: 0;
     list-style: none;
 }
+header{
+    background-color: #8888;
+}
+section{
+    background-image: url(../assets/cancha.jpg);
+    background-size:cover;
+    background-attachment:fixed;
+    height:200px;
+
+}
+
 .titulo { 
+    font-size: 5rem;
     display: flex;
     justify-content: center;
     align-content: center;
-    text-shadow: 2px 2px 3px rgba(7, 115, 196,0.5) ;
-    
+    color: black;
 }
+
 #infoEquipoConvocado {
     color: rgb(7, 115, 196);
     display: flex;

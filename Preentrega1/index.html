@@ -8,56 +8,52 @@
     <script defer src="./js/main.js"></script>
 </head>
 <body>
-    
+    <header>
     <H1 class="titulo">Soy DT</H1>
     <h2>Elegi tu 5 ideal!</h2>
-    
+    </header>
 
-    <form id="Equipo" action="#" method="get">
-        <label for="Arqueros">Arqueros</label>
-        <datalist  id="ArquerosDatalist" >
-            <option>Arquero 1</option>
-            <option>Arquero 2</option>
-            <option>Arquero 3</option>
-        </datalist>
-         <input type="text" name="Arqueros" id="Arqueros" list="ArquerosDatalist">
+    <section class="Container">
+        
+    <form id="Equipo" action="#" method="get"> 
+         <label for="Arqueros">Arqueros:</label>
+         <select id="Arqueros" name="ArquerosDatalist" size="1">
+             <option value="Arquero 1">Arquero 1</option>
+             <option value="Arquero 2">Arquero 2</option>
+             <option value="Arquero 3">Arquero 3</option>
+         </select>
 
-         <label for="Defensores">Defensores</label>
-         <datalist  id="DefensoresDatalist">
-             <option>Defensor 4</option>
-             <option>Defensor 5</option>
-             <option>Defensor 6</option>
-             <option>Defensor 7</option>
-         </datalist>
-          <input type="text" name="Defensores" id="Defensores" list="DefensoresDatalist">
+         <label for="Defensores">Defensores:</label>
+         <select id="Defensores" name="DefensoresDatalist" size="1">
+             <option value="Defensor 4">Defensor 4</option>
+             <option value="Defensor 5">Defensor 5</option>
+             <option value="Defensor 6">Defensor 6</option>
+             <option value="Defensor 7">Defensor 7</option>
+         </select>
+        
+         <label for="Mediocampistas">Mediocampistas:</label>
+         <select id="Mediocampistas" name="MediocampistasDatalist" size="1">
+             <option value="Mediocampistas 8">Mediocampistas 8</option>
+             <option value="Mediocampistas 9">Mediocampistas 9</option>
+             <option value="Mediocampistas 10">Mediocampistas 10</option>
+             <option value="Mediocampistas 11">Mediocampistas 11</option>
+         </select>
+       
+         <label for="Mediocampistas2">Mediocampistas2:</label>
+         <select id="Mediocampistas2" name="MediocampistasDatalist2" size="1">
+             <option value="Mediocampistas 8">Mediocampistas 8</option>
+             <option value="Mediocampistas 9">Mediocampistas 9</option>
+             <option value="Mediocampistas 10">Mediocampistas 10</option>
+             <option value="Mediocampistas 11">Mediocampistas 11</option>
+         </select>
 
-          <label for="Mediocampistas">Mediocampistas</label>
-        <datalist  id="MediocampistasDatalist" >
-            <option>Mediocampista 8</option>
-            <option>Mediocampista 9</option>
-            <option>Mediocampista 10</option>
-            <option>Mediocampista 11</option>
-        </datalist>
-         <input type="text" name="Mediocampistas" id="Mediocampistas" list="MediocampistasDatalist">
-
-         <label for="Mediocampistas2">Mediocampistas2</label>
-         <datalist  id="MediocampistasDatalist2" >
-            <option>Mediocampista 8</option>
-            <option>Mediocampista 9</option>
-            <option>Mediocampista 10</option>
-            <option>Mediocampista 11</option>
-        </datalist>
-         <input type="text" name="Mediocampistas2" id="Mediocampistas2" list="MediocampistasDatalist2">
-
-         <label for="Delanteros">Delanteros</label>
-        <datalist  id="DelanterosDatalist">
-            <option>Delantero 12</option>
-            <option>Delantero 13</option>
-            <option>Delantero 14</option>
-            <option>Delantero 15</option>
-            
-        </datalist>
-        <input type="text" name="Delanteros" id="Delanteros" list="DelanterosDatalist"> 
+        <label for="Delanteros">Delanteros:</label>
+            <select id="Delanteros" name="DelanterosDatalist" size="1">
+                <option value="Delantero 12">Delantero 12</option>
+                <option value="Delantero 13">Delantero 13</option>
+                <option value="Delantero 14">Delantero 14</option>
+                <option value="Delantero 15">Delantero 15</option>
+            </select>
 
      <button id="botonElegidos">Elegir</button>
      <button id="botonConvocados">Convocados</button>
@@ -65,7 +61,8 @@
    
 
     <br>
+    
     <div id="infoEquipoConvocado">Tus Convocados: </div>
-
+    </section>
 </body>
 </html>
