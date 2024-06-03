@@ -5,13 +5,14 @@
     list-style: none;
 }
 header{
-    background-color: #8888;
+    background-color: #888a;
 }
 section{
     background-image: url(../assets/cancha.jpg);
     background-size:cover;
     background-attachment:fixed;
-    height:200px;
+    height:1500px;
+    
 
 }
 
@@ -33,6 +34,7 @@ section{
     background-color: #8888;
 
 }
+
 form {
     color: whitesmoke;
     display: flex;
@@ -40,7 +42,16 @@ form {
     align-content: center;
     background-color: #888f;
 }
+
 button {
     color:whitesmoke;
     background-color: rgb(7, 115, 196);
+}
+
+button .botonEquipo { 
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
 }

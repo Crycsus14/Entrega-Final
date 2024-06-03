@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "nombre": "Jugador 1",
+        "posicion": "Arquero"
+    },
+    {
+        "id": 2,
+        "nombre": "Jugador 2",
+        "posicion": "Arquero"
+    },
+    {
+        "id": 3,
+        "nombre": "Jugador 3",
+        "posicion": "Arquero"
+    },
+    {
+        "id": 4,
+        "nombre": "Jugador 4",
+        "posicion": "Defensor"
+    },
+    {
+        "id": 5,
+        "nombre": "Jugador 5",
+        "posicion": "Defensor"
+    },
+    {
+        "id": 6,
+        "nombre": "Jugador 6",
+        "posicion": "Defensor"
+    },
+    {
+        "id": 7,
+        "nombre": "Jugador 7",
+        "posicion": "Defensor"
+    },
+    {
+        "id": 8,
+        "nombre": "Jugador 8",
+        "posicion": "Mediocampista"
+    },
+    {
+        "id": 9,
+        "nombre": "Jugador 9",
+        "posicion": "Mediocampista"
+    },
+    {
+        "id": 10,
+        "nombre": "Jugador 10",
+        "posicion": "Mediocampista"
+    },
+    {
+        "id": 11,
+        "nombre": "Jugador 11",
+        "posicion": "Mediocampista"
+    },
+    {
+        "id": 12,
+        "nombre": "Jugador 12",
+        "posicion": "Delantero"
+    },
+    {
+        "id": 13,
+        "nombre": "Jugador 13",
+        "posicion": "Delantero"
+    },
+    {
+        "id": 14,
+        "nombre": "Jugador 14",
+        "posicion": "Delantero"
+    },
+    {
+        "id": 15,
+        "nombre": "Jugador 15",
+        "posicion": "Delantero"
+    }
+
+]
