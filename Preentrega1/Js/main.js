@@ -15,6 +15,7 @@ fetch(listaJugadores)
     function mostrarJugadores(jugadores) {
         jugadores.forEach((jugador)=>{
             const card = document.createElement('div');
+            card.classList.add(`jugador-card`);
             card.innerHTML = `
                             <div>
                                 <h2> ${jugador.nombre}</h2>
@@ -25,8 +26,8 @@ fetch(listaJugadores)
             `;
             contenedorJugadores.appendChild(card);
 
-            const boton = document.getElementById(`boton${jugador.id}`);
-            boton.addEventListener("click", () => {
+            const boton = card.querySelector(`#boton${jugador.id}`);
+            boton.addEventListener('click', () => {
                 elegirJugador(jugador.id, jugadores);
             });
         });
