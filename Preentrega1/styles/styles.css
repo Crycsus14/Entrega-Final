@@ -9,7 +9,7 @@ header{
     background-color: #888a;
 }
 section{
-    background-image: url(../assets/cancha.jpg);
+    /* background-image: url(../assets/cancha.jpg); */
     background-size:cover;
     background-attachment:fixed;
     height:1500px;
