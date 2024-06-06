@@ -1,28 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
+
 *{
-    font-family: none;
+    
     font-size: 1.2rem;
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
-body{
-    
-    height:1000px;
-    background-image: url(../assets/cancha.jpg);
-    background-size:cover;
-    background-attachment:local;
-
+/* header */
+.headerContainer{
+    background-color: #383636;
+    display: flex;
+    flex-direction: inline;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
 }
-
+.headerLogo{
+    margin: 10px;
+    padding: 25px,30px;
+    padding: 5px;
+}
 .titulo { 
     font-size: 5rem;
     display: flex;
     justify-content: center;
     align-content: center;
-    color: black;
-    text-shadow:2px 2px 4px rgb(7, 115, 196);
+    color: rgb(7, 115, 196);
+    text-shadow:2px 2px 4px rgb(201, 201, 201);
 }
+
+/* body */
+body{
+    height:1000px;
+}
+.imagenContainer{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    background: url(../assets/cancha.jpg) no-repeat center center fixed; 
+    background-size: cover;
+ }
+
+
 
 #infoEquipoConvocado {
     color: rgb(7, 115, 196);
@@ -33,18 +58,13 @@ body{
     background-color: #8888;
 
 }
-h4{ 
-    justify-content: center;
-    text-align: center;
-    color: blue;
-    background: #8888;
-    
-    
+.textoElegi , .texto{
+    font-size: 3rem;
+    text-shadow:2px 2px 4px rgba(19, 19, 2, 0.781);
 }
-.texto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#tablabody {
+    background-color: #383636;
+
 }
 button {
     color:whitesmoke;
@@ -52,6 +72,10 @@ button {
     border-radius: 8px;
     border-style:outset;
 
+}
+button:hover {
+    color: whitesmoke;
+    background-color: rgb(67, 27, 179);
 }
 
 button .botonEquipo { 
@@ -74,7 +98,22 @@ button .botonEquipo {
      border-left: solid 2px #8888 ;
      border-bottom: solid 2px #8888 ;
 }
+.jugador-card:hover{
+    background-color: #4c4848b4 ;
+    text-shadow:3px 2px 4px rgba(11, 53, 168, 0.918);
+}
+
+/* footer */
 footer{
-    height:max-content;
-    background-color: #0f0e0e;
+    height:min-content;
+    color: #FFFFFF;
+    background-color: #383636;
+}
+.footerContainer{
+    display: flex;
+    flex-direction: inline;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
 }
