@@ -1,0 +1,4 @@
+Hola muchas gracias por corregir este proyecto con finalidad estudiantiles. La idea de esta  "app web" es medio simular una especie de "Gran DT" (para salir de un e-commerce o un sitio de alquiler, etc.). Desde ya toda sugerencia sera bien recibida (aunque sea que no este bien encarada la idea o lo que fuera.).
+Me quede con ganas de agregarle mas cosas como por ejemplo un selector para seleccionar una "formacion" y que desde el Storage se imprima en la tabla tambien(lo voy a hacer con mas tiempo).
+Queria agradecerles tanto a Alesio como a Javier porque me re impulsaron a seguir metiendole a la carrera y no tirarme abajo con el tema de que no hayan tantas ofertas laborales. Son dos tipasos ojala algun dia aunque sea jugar al Age.
+Saludos y muchas gracias.
