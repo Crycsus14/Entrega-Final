@@ -1,93 +1,92 @@
 [
-    {
-        "id": 1,
-        "nombre": "Jugador 1",
-        "posicion": "Arquero",
-        "pierna": "Diestro"
-    },
-    {
-        "id": 2,
-        "nombre": "Jugador 2",
-        "posicion": "Arquero",
-        "pierna":   "Zurdo"
-    },
-    {
-        "id": 3,
-        "nombre": "Jugador 3",
-        "posicion": "Arquero",
-        "pierna":   "Diestro"
-    },
-    {
-        "id": 4,
-        "nombre": "Jugador 4",
-        "posicion": "Defensor",
-        "pierna": "Diestro"
-    },
-    {
-        "id": 5,
-        "nombre": "Jugador 5",
-        "posicion": "Defensor",
-        "pierna":   "Diestro"
-    },
-    {
-        "id": 6,
-        "nombre": "Jugador 6",
-        "posicion": "Defensor",
-        "pierna":   "Zurdo"
-    },
-    {
-        "id": 7,
-        "nombre": "Jugador 7",
-        "posicion": "Defensor",
-        "pierna":   "Diestro"
-    },
-    {
-        "id": 8,
-        "nombre": "Jugador 8",
-        "posicion": "Mediocampista",
-        "pierna":   "Diestro"
-    },
-    {
-        "id": 9,
-        "nombre": "Jugador 9",
-        "posicion": "Mediocampista",
-        "pierna":   "Diestro"
-    },
-    {
-        "id": 10,
-        "nombre": "Jugador 10",
-        "posicion": "Mediocampista",
-        "pierna":   "Zurdo"
-    },
-    {
-        "id": 11,
-        "nombre": "Jugador 11",
-        "posicion": "Mediocampista",
-        "pierna":   "Zurdo"
-    },
-    {
-        "id": 12,
-        "nombre": "Jugador 12",
-        "posicion": "Delantero",
-        "pierna":   "Diestro"
-    },
-    {
-        "id": 13,
-        "nombre": "Jugador 13",
-        "posicion": "Delantero",
-        "pierna":   "Zurdo"
-    },
-    {
-        "id": 14,
-        "nombre": "Jugador 14",
-        "posicion": "Delantero",
-        "pierna":   "Diestro"
-    },
-    {
-        "id": 15,
-        "nombre": "Jugador 15",
-        "posicion": "Delantero",
-        "pierna": "Zurdo"
-    }
-
+  {
+    "id": 1,
+    "nombre": "Jugador 1",
+    "posicion": "Arquero",
+    "pierna": "Diestro"
+  },
+  {
+    "id": 2,
+    "nombre": "Jugador 2",
+    "posicion": "Arquero",
+    "pierna": "Zurdo"
+  },
+  {
+    "id": 3,
+    "nombre": "Jugador 3",
+    "posicion": "Arquero",
+    "pierna": "Diestro"
+  },
+  {
+    "id": 4,
+    "nombre": "Jugador 4",
+    "posicion": "Defensor",
+    "pierna": "Diestro"
+  },
+  {
+    "id": 5,
+    "nombre": "Jugador 5",
+    "posicion": "Defensor",
+    "pierna": "Diestro"
+  },
+  {
+    "id": 6,
+    "nombre": "Jugador 6",
+    "posicion": "Defensor",
+    "pierna": "Zurdo"
+  },
+  {
+    "id": 7,
+    "nombre": "Jugador 7",
+    "posicion": "Defensor",
+    "pierna": "Diestro"
+  },
+  {
+    "id": 8,
+    "nombre": "Jugador 8",
+    "posicion": "Mediocampista",
+    "pierna": "Diestro"
+  },
+  {
+    "id": 9,
+    "nombre": "Jugador 9",
+    "posicion": "Mediocampista",
+    "pierna": "Diestro"
+  },
+  {
+    "id": 10,
+    "nombre": "Jugador 10",
+    "posicion": "Mediocampista",
+    "pierna": "Zurdo"
+  },
+  {
+    "id": 11,
+    "nombre": "Jugador 11",
+    "posicion": "Mediocampista",
+    "pierna": "Zurdo"
+  },
+  {
+    "id": 12,
+    "nombre": "Jugador 12",
+    "posicion": "Delantero",
+    "pierna": "Diestro"
+  },
+  {
+    "id": 13,
+    "nombre": "Jugador 13",
+    "posicion": "Delantero",
+    "pierna": "Zurdo"
+  },
+  {
+    "id": 14,
+    "nombre": "Jugador 14",
+    "posicion": "Delantero",
+    "pierna": "Diestro"
+  },
+  {
+    "id": 15,
+    "nombre": "Jugador 15",
+    "posicion": "Delantero",
+    "pierna": "Zurdo"
+  }
 ]

@@ -1,22 +1,23 @@
+const listaJugadores = "json/dataEquipo.json";
 
-const listaJugadores = 'json/dataEquipo.json';
-
-const contenedorJugadores = document.getElementById('mostrarJugadores');
-const contenedorBotonReiniciar = document.getElementById('contenedorBotonReiniciar');
+const contenedorJugadores = document.getElementById("mostrarJugadores");
+const contenedorBotonReiniciar = document.getElementById(
+  "contenedorBotonReiniciar"
+);
 
 fetch(listaJugadores)
-    .then((respuesta) => respuesta.json())
-    .then((datos) => {
-        mostrarJugadores(datos);
-        agregarBotonReiniciar();
-    })
-    .catch((err) => console.log(err));
+  .then((respuesta) => respuesta.json())
+  .then((datos) => {
+    mostrarJugadores(datos);
+    agregarBotonReiniciar();
+  })
+  .catch((err) => console.log(err));
 
-    function mostrarJugadores(jugadores) {
-        jugadores.forEach((jugador)=>{
-            const card = document.createElement('div');
-            card.classList.add(`jugador-card`);
-            card.innerHTML = `
+function mostrarJugadores(jugadores) {
+  jugadores.forEach((jugador) => {
+    const card = document.createElement("div");
+    card.classList.add(`jugador-card`);
+    card.innerHTML = `
                             <div>
                                 <h2> ${jugador.nombre}</h2>
                                 <h3> ${jugador.posicion}</h3>
@@ -24,99 +25,103 @@ fetch(listaJugadores)
                                 <button id="boton${jugador.id}">Elegir Jugador</button>
                             </div>
             `;
-            contenedorJugadores.appendChild(card);
+    contenedorJugadores.appendChild(card);
 
-            const boton = card.querySelector(`#boton${jugador.id}`);
-            boton.addEventListener('click', () => {
-                elegirJugador(jugador.id, jugadores);
-            });
-        });
-    }
+    const boton = card.querySelector(`#boton${jugador.id}`);
+    boton.addEventListener("click", () => {
+      elegirJugador(jugador.id, jugadores);
+    });
+  });
+}
 
-    const equipo = [];
+const equipo = [];
 
-    const elegirJugador = (id, jugadores) => {
-        if (equipo.length >= 5) {
-            alert('No puedes elegir más de 5 jugadores.');
-            return;
-        }
+const elegirJugador = (id, jugadores) => {
+  if (equipo.length >= 5) {
+    Toastify({
+      text: "No podes seleccionar mas de 5 jugadores",
+      duration: 2000,
+      destination: "",
+      newWindow: true,
+      close: false,
+      gravity: "top",
+      position: "center",
+      stopOnFocus: true,
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      },
+      onClick: function () {},
+    }).showToast();
+    return;
+  }
 
-        const jugador = jugadores.find((jugador) => jugador.id === id)
+  const jugador = jugadores.find((jugador) => jugador.id === id);
 
-        if (!jugador) {
-            console.error(`Jugador con esa ID ${id} no encontrado`);
-            return;
-        }
-        if (equipo.some((j) => j.id === id)) {
-            alert('Este jugador ya está en el equipo.');
-            return;
-        }
+  if (!jugador) {
+    console.error(`Jugador con esa ID ${id} no encontrado`);
+    return;
+  }
+  if (equipo.some((j) => j.id === id)) {
+    Toastify({
+      text: "Ya seleccionaste a este jugador",
+      duration: 1500,
+      destination: "",
+      newWindow: true,
+      close: false,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "linear-gradient(to right, #1bb3b3, #1b76b3)",
+      },
+      onClick: function () {},
+    }).showToast();
+    return;
+  }
 
-        equipo.push(jugador);
-        localStorage.setItem("equipo", JSON.stringify(equipo))
-    };
+  equipo.push(jugador);
+  localStorage.setItem("equipo", JSON.stringify(equipo));
 
-    const agregarBotonReiniciar = () => {
-        const botonReiniciar = document.createElement('button');
-        botonReiniciar.innerText = 'Reiniciar Selección';
-        botonReiniciar.addEventListener('click', reiniciarSeleccion);
-        contenedorBotonReiniciar.appendChild(botonReiniciar);
-    };
-    
-    const reiniciarSeleccion = () => {
-        equipo.length = 0;
-        localStorage.removeItem('equipo'); 
-        console.log('Selección reiniciada');
-        alert('Has reiniciado la selección de jugadores.');
-    };
-// let botonElegidos = document.getElementById("botonElegidos");
-// botonElegidos.addEventListener("click", datosEquipo);
+  Toastify({
+    text: "Jugador seleccionado",
+    duration: 1500,
+    destination: "",
+    newWindow: true,
+    close: false,
+    gravity: "top",
+    position: "left",
+    stopOnFocus: true,
+    style: {
+      background: "linear-gradient(to right, #0b35a8ea, #0773c4)",
+    },
+    onClick: function () {},
+  }).showToast();
+};
 
-// let botonConvocados = document.getElementById("botonConvocados");
-// botonConvocados.addEventListener("click", traerEquipo);
+const agregarBotonReiniciar = () => {
+  const botonReiniciar = document.createElement("button");
+  botonReiniciar.innerText = "Reiniciar Selección";
+  botonReiniciar.addEventListener("click", reiniciarSeleccion);
+  contenedorBotonReiniciar.appendChild(botonReiniciar);
+};
 
-// function datosEquipo() {
-//     const Jugadores = document.getElementById("Equipo");
-//     const infoEquipo = {
-//         Arqueros: document.getElementById("Arqueros").value,
-//         Defensores: document.getElementById("Defensores").value,
-//         Mediocampistas: document.getElementById("Mediocampistas").value,
-//         Mediocampistas2: document.getElementById("Mediocampistas2").value,
-//         Delanteros: document.getElementById("Delanteros").value,
-//     }
-//         if(document.getElementById("Mediocampistas").value === document.getElementById("Mediocampistas2").value){
-//         alert("Por favor selecciona otro Mediocampista 2")
-//         }
-    
-//     const datosJson = JSON.stringify(infoEquipo);
+const reiniciarSeleccion = () => {
+  equipo.length = 0;
+  localStorage.removeItem("equipo");
+  console.log("Selección reiniciada");
 
-//     localStorage.setItem("Equipocompleto", datosJson);
-    
-// }
-
-// function traerEquipo() {
-//     const Jugadores = document.getElementById("Equipo");
-//     const datosJson = localStorage.getItem("Equipocompleto");
-//     if (datosJson) { 
-//         const infoEquipo = JSON.parse(datosJson);
-//         Jugadores["Arqueros"].value = infoEquipo.Arqueros;
-//         Jugadores["Defensores"].value = infoEquipo.Defensores;
-//         Jugadores["Mediocampistas"].value = infoEquipo.Mediocampistas;
-//         Jugadores["Mediocampistas2"].value = infoEquipo.Mediocampistas2;
-//         Jugadores["Delanteros"].value = infoEquipo.Delanteros;
-
-//         const infoEquipoConvocado = document.getElementById("infoEquipoConvocado");
-//         infoEquipoConvocado.innerHTML = "";
-
-//         const infoEquipoLista = document.createElement("ul");
-
-//         for (const key in infoEquipo) {
-//             const listaItem = document.createElement("li");
-//             listaItem.textContent = `${key}: ${infoEquipo[key]}`;
-//             infoEquipoLista.appendChild(listaItem);
-//         }
-
-//         infoEquipoConvocado.appendChild(infoEquipoLista);
-//     } 
-       
-// }
+  Toastify({
+    text: "Reiniciaste la selección del equipo",
+    duration: 2000,
+    destination: "",
+    newWindow: true,
+    close: false,
+    gravity: "top",
+    position: "center",
+    stopOnFocus: true,
+    style: {
+      background: "linear-gradient(to right, #0773c4, #431bb3)",
+    },
+    onClick: function () {},
+  }).showToast();
+};
